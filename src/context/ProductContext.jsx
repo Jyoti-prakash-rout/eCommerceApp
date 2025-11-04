@@ -15,7 +15,7 @@ export function ProductProvider({ children }) {
         );
         if (!res.ok) throw new Error("Something went wrong😐");
         const data = await res.json();
-        setProducts(data);
+        setProducts(data.products);
       } catch (err) {
         setError(err.message);
       } finally {
