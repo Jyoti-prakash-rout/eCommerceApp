@@ -2,7 +2,8 @@ import React from "react";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
-const ProductCard = ({ product }) => {
+
+const ProductCard = ({product}) => {
   const { addToCart } = useContext(CartContext);
 
   return (
@@ -18,7 +19,7 @@ const ProductCard = ({ product }) => {
           />
         </div>
 
-        <div className="p-4 flex flex-col flex-grow">
+        <div className="p-4 flex flex-col">
           <h2 className="text-lg font-semibold text-gray-800 mb-1 truncate">
             {product.name}
           </h2>
