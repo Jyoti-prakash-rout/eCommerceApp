@@ -10,7 +10,9 @@ export function ProductProvider({ children }) {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch("http://localhost:8000/products");
+        const res = await fetch(
+          "https://mocki.io/v1/b0bea905-0487-40e7-97ee-4cfe05398f88"
+        );
         if (!res.ok) throw new Error("Something went wrong😐");
         const data = await res.json();
         setProducts(data);
